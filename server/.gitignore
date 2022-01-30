@@ -1,0 +1,6 @@
+/env
+/__pycache__/
+/trips/__pycache__/
+/trips/migrations/__pycache__/
+/migrations/__pycache__/
+/taxi/__pycache__/

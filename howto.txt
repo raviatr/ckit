@@ -1,0 +1,53 @@
+#super user
+admin - admin
+
+# Anaconda powershell prompt - Python3.8
+cd ckit/server
+python -m venv env
+
+ .\env\Scripts\activate
+
+pip install -r requirements.txt
+
+export PGDATABASE=taxi PGUSER=taxi PGPASSWORD=taxi
+
+#create
+docker-compose up -d --build
+
+#Start the psql tool in the taxi-database Docker container with the following command:
+docker-compose exec taxi-database psql -U postgres
+
+CREATE USER taxi WITH SUPERUSER CREATEDB CREATEROLE PASSWORD 'taxi';
+CREATE DATABASE taxi OWNER taxi;
+
+docker-compose down
+
+cd ckit
+
+#bring it up again
+docker-compose up -d
+
+#migrate
+docker-compose exec taxi-server python manage.py migrate
+docker-compose exec taxi-server python manage.py makemigrations
+
+docker-compose exec taxi-server pytest
+
+# production
+
+  d:
+  cd d:/ckit/
+  docker-compose up -d --build
+  Try the following routes in your browser:
+
+  http://localhost:8080/#/
+  http://localhost:8080/#/log-in
+  http://localhost:8080/#/sign-up
+  http://localhost:8080/api/sign_up/
+  http://localhost:8080/api/log_in/
+  http://localhost:8080/admin
+#Test
+  docker-compose exec taxi-server python -m pytest
+  docker-compose exec taxi-client ng test
+
+  ng test --source-map=false
