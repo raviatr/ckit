@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { User } from '../../services/auth.service'; // new
 import { Trip, otherUser } from '../../services/trip.service'; // changed
@@ -21,5 +21,5 @@ export class TripCardComponent implements OnInit {
    otherUser(trip: Trip): User | null {
      return otherUser(trip);
    }
-   
+
 }

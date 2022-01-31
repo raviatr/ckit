@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { Trip, TripService } from '../../services/trip.service';
+import { TripCardComponent } from '../trip-card/trip-card.component'; // new
 
 @Component({
   selector: 'app-rider-dashboard',

@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 
 import { Trip, TripService } from '../../services/trip.service';
 import { ToastrService } from 'ngx-toastr';
+import { TripCardComponent } from '../trip-card/trip-card.component'; // new
 
 @Component({
   selector: 'app-driver-dashboard',

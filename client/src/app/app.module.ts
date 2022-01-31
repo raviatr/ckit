@@ -40,8 +40,8 @@ import { ToastrModule } from 'ngx-toastr';
     RiderComponent,
     RiderDashboardComponent,
     RiderRequestComponent,
-    RiderDetailComponent,
     TripCardComponent,
+    RiderDetailComponent,
     DriverComponent,
     DriverDashboardComponent,
     DriverDetailComponent

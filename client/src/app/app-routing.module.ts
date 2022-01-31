@@ -17,6 +17,8 @@ import { RiderRequestComponent } from './components/rider-request/rider-request.
 import { TripDetailResolver } from './services/trip-detail.resolver';
 import { RiderDetailComponent } from './components/rider-detail/rider-detail.component';
 import { DriverComponent } from './components/driver/driver.component';
+import { DriverDashboardComponent } from './components/driver-dashboard/driver-dashboard.component';
+
 import { DriverDetailComponent } from './components/driver-detail/driver-detail.component';
 
 const routes: Routes = [

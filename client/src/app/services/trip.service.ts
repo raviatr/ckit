@@ -35,6 +35,7 @@ export const otherUser = (trip: Trip): User | null => {
   return AuthService.isRider() ? trip.driver : trip.rider;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -87,4 +88,6 @@ export class TripService {
     };
     this.webSocket.next(message);
   }
+
+
 }
